@@ -1,0 +1,99 @@
+{
+	"TIP1": {
+		"component": "TimedInputPin",
+		"data": {
+			"gpioPort": 12,
+			"out": [
+			        {
+			        	"target": "Pin1",
+			        	"export": {
+			        		"measurement": "time"
+			        	}
+			        }
+		        	]
+		},
+		"meta_data": {
+			"x": 30,
+			"y": 50,
+			"start": true
+		}
+	},
+	"Pin1": {
+		"component": "Pin",
+		"data": {
+			"gpioPort": 7,
+			"io": "output",
+			"value": true,
+			"input": {
+				"time": 1000
+			},
+			"out": [
+			        {
+			        	"target": "Pin2"
+			        }
+		        	]
+		},
+		"meta_data": {
+			"x": 50,
+			"y": 80
+		}
+	},
+	"Pin2": {
+		"component": "Pin",
+		"data": {
+			"gpioPort": 7,
+			"io": "output",
+			"value": false,
+			"input": {
+				"time": 1000
+			},
+			"out": [
+			        {
+			        	"target": "Pin3"
+			        }
+		        	]
+		},
+		"meta_data": {
+			"x": 50,
+			"y": 110
+		}
+	},
+	"Pin3": {
+		"component": "Pin",
+		"data": {
+			"gpioPort": 7,
+			"io": "output",
+			"value": true,
+			"input": {
+				"time": 1000
+			},
+			"out": [
+			        {
+			        	"target": "Pin4"
+			        }
+		        	]
+		},
+		"meta_data": {
+			"x": 80,
+			"y": 140
+		}
+	},
+	"Pin4": {
+		"component": "Pin",
+		"data": {
+			"gpioPort": 11,
+			"io": "input",
+			"out": [
+			        {
+			        	"target": "Pin1",
+			        	"onChange": true
+			        }
+		        	]
+		},
+		"meta_data": {
+			"x": 50,
+			"y": 170,
+			"end": true
+		}
+	}
+}
